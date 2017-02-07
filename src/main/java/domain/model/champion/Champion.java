@@ -56,8 +56,8 @@ public class Champion implements IHaveSkill {
         this.attributesOfChampion = attributesOfChampion;
     }
 
-    public PassiveSkill passiveSkill(String skillName, String description) {
-        return new PassiveSkill(skillName, description);
+    public Skill passiveSkill(String skillName, String description) {
+        return new Skill(skillName, description);
     }
 
     public ActiveSkill firstActiveSkill(String skillName, String description) {
