@@ -1,11 +1,11 @@
 package domain.model.champion;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
  * @author: Lelental on 07.02.2017
  */
-@Component
 public class ActiveSkill extends Skill {
 
 
@@ -14,8 +14,8 @@ public class ActiveSkill extends Skill {
     private String manaCost;
     private String cooldown;
 
-    public ActiveSkill(String name, String description) {
-        super(name, description);
+    public ActiveSkill() {
+
     }
 
     public int getRange() {

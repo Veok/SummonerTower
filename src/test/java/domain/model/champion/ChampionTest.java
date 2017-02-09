@@ -1,6 +1,9 @@
 package domain.model.champion;
 
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.contrib.java.lang.system.StandardOutputStreamLog;
+import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -15,6 +18,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @ContextConfiguration(classes = ChampionConfig.class)
 public class ChampionTest {
 
+    @Rule
+    public final SystemOutRule systemOutRule = new SystemOutRule().enableLog();
     @Autowired
     private Champion champion;
 
@@ -22,5 +27,7 @@ public class ChampionTest {
     public void championShouldNotBeNull() {
         assertNotNull(champion);
     }
+
+
 
 }
