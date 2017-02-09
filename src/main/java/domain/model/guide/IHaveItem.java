@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * @author: Lelental on 07.02.2017
  */
-public interface IHaveItems {
+public interface IHaveItem {
 
     List<Item> startItems();
 

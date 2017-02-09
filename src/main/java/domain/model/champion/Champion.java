@@ -1,8 +1,12 @@
 package domain.model.champion;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /**
  * @author: Lelental on 07.02.2017
  */
+@Component
 public class Champion implements IHaveSkill {
 
     private String name;
@@ -35,7 +39,7 @@ public class Champion implements IHaveSkill {
     public Role getRole() {
         return role;
     }
-
+    @Autowired
     public void setRole(Role role) {
         this.role = role;
     }
@@ -43,7 +47,7 @@ public class Champion implements IHaveSkill {
     public Position getPosition() {
         return position;
     }
-
+    @Autowired
     public void setPosition(Position position) {
         this.position = position;
     }
@@ -52,26 +56,28 @@ public class Champion implements IHaveSkill {
         return attributesOfChampion;
     }
 
+    @Autowired
     public void setAttributesOfChampion(AttributesOfChampion attributesOfChampion) {
         this.attributesOfChampion = attributesOfChampion;
     }
-
+    @Autowired
     public Skill passiveSkill(String skillName, String description) {
         return new Skill(skillName, description);
     }
 
+    @Autowired
     public ActiveSkill firstActiveSkill(String skillName, String description) {
         return new ActiveSkill(skillName, description);
     }
-
+    @Autowired
     public ActiveSkill secondActiveSkill(String skillName, String description) {
         return new ActiveSkill(skillName, description);
-    }
+    }@Autowired
 
     public ActiveSkill thirdActiveSkill(String skillName, String description) {
         return new ActiveSkill(skillName, description);
     }
-
+    @Autowired
     public ActiveSkill ultimateSkill(String skillName, String description) {
         return new ActiveSkill(skillName, description);
     }

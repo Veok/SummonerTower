@@ -1,13 +1,16 @@
 package domain.model.guide;
 
 import domain.model.champion.Champion;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 /**
  * @author: Lelental on 07.02.2017
  */
-public class BuildOfChampion implements IHaveItems{
+@Component
+public class BuildOfChampion implements IHaveItem {
 
     private Champion champion;
     private Spell firstSpell;
@@ -17,15 +20,15 @@ public class BuildOfChampion implements IHaveItems{
 
     public BuildOfChampion() {
     }
-
+    @Autowired
     public List<Item> startItems() {
         return null;
     }
-
+    @Autowired
     public List<Item> middleItems() {
         return null;
     }
-
+    @Autowired
     public List<Item> finalItems() {
         return null;
     }
@@ -33,7 +36,7 @@ public class BuildOfChampion implements IHaveItems{
     public Champion getChampion() {
         return champion;
     }
-
+    @Autowired
     public void setChampion(Champion champion) {
         this.champion = champion;
     }
@@ -41,7 +44,7 @@ public class BuildOfChampion implements IHaveItems{
     public Spell getFirstSpell() {
         return firstSpell;
     }
-
+    @Autowired
     public void setFirstSpell(Spell firstSpell) {
         this.firstSpell = firstSpell;
     }
@@ -49,7 +52,7 @@ public class BuildOfChampion implements IHaveItems{
     public Spell getSecondSpell() {
         return secondSpell;
     }
-
+    @Autowired
     public void setSecondSpell(Spell secondSpell) {
         this.secondSpell = secondSpell;
     }
