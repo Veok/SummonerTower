@@ -12,8 +12,10 @@ public class Champion {
 
     private String name;
     private String info;
+
     private Role role;
     private Position position;
+
     private AttributesOfChampion attributesOfChampion;
     private ActiveSkill firstActiveSkill;
     private ActiveSkill secondActiveSkill;
@@ -46,6 +48,7 @@ public class Champion {
         return role;
     }
 
+    @Autowired
     public void setRole(Role role) {
         this.role = role;
     }
@@ -54,7 +57,7 @@ public class Champion {
         return position;
     }
 
-
+    @Autowired
     public void setPosition(Position position) {
         this.position = position;
     }
@@ -63,7 +66,7 @@ public class Champion {
         return attributesOfChampion;
     }
 
-
+    @Autowired
     public void setAttributesOfChampion(AttributesOfChampion attributesOfChampion) {
         this.attributesOfChampion = attributesOfChampion;
     }
@@ -79,7 +82,7 @@ public class Champion {
     public ActiveSkill getSecondActiveSkill() {
         return secondActiveSkill;
     }
-
+    @Autowired
     public void setSecondActiveSkill(ActiveSkill secondActiveSkill) {
         this.secondActiveSkill = secondActiveSkill;
     }
@@ -87,7 +90,7 @@ public class Champion {
     public ActiveSkill getThirdActiveSkill() {
         return thirdActiveSkill;
     }
-
+    @Autowired
     public void setThirdActiveSkill(ActiveSkill thirdActiveSkill) {
         this.thirdActiveSkill = thirdActiveSkill;
     }
@@ -95,7 +98,7 @@ public class Champion {
     public ActiveSkill getUltimateSkill() {
         return ultimateSkill;
     }
-
+    @Autowired
     public void setUltimateSkill(ActiveSkill ultimateSkill) {
         this.ultimateSkill = ultimateSkill;
     }
@@ -103,8 +106,8 @@ public class Champion {
     public Skill getPassiveSkill() {
         return passiveSkill;
     }
-
-    public void setPassiveSkill(@Qualifier("skill") Skill passiveSkill) {
+    @Autowired
+    public void setPassiveSkill(Skill passiveSkill) {
         this.passiveSkill = passiveSkill;
     }
 }

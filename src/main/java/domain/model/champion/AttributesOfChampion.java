@@ -1,10 +1,12 @@
 package domain.model.champion;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
  * @author Lelental on 07.02.2017
  */
+
 public class AttributesOfChampion {
 
     private double health;
@@ -25,6 +27,9 @@ public class AttributesOfChampion {
         this.attackRange = attackRange;
         this.attackSpeed = attackSpeed;
         this.movementSpeed = movementSpeed;
+    }
+
+    public AttributesOfChampion() {
     }
 
     public double getHealth() {

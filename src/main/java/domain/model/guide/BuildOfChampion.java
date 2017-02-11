@@ -2,35 +2,53 @@ package domain.model.guide;
 
 import domain.model.champion.Champion;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
+import javax.inject.Named;
 import java.util.List;
 
 /**
  * @author: Lelental on 07.02.2017
  */
 @Component
-public class BuildOfChampion implements IHaveItem {
+public class BuildOfChampion  {
 
     private Champion champion;
     private Spell firstSpell;
     private Spell secondSpell;
     private String author;
     private int points;
+    private List<Item> startItems;
+    private List<Item> middleItems;
+    private List<Item> finalItems;
 
     public BuildOfChampion() {
     }
-    @Autowired
-    public List<Item> startItems() {
-        return null;
+
+
+    public List<Item> getStartItems() {
+        return startItems;
     }
     @Autowired
-    public List<Item> middleItems() {
-        return null;
+    public void setStartItems(List<Item> startItems) {
+        this.startItems = startItems;
+    }
+
+    public List<Item> getMiddleItems() {
+        return middleItems;
     }
     @Autowired
-    public List<Item> finalItems() {
-        return null;
+    public void setMiddleItems(List<Item> middleItems) {
+        this.middleItems = middleItems;
+    }
+
+    public List<Item> getFinalItems() {
+        return finalItems;
+    }
+    @Autowired
+    public void setFinalItems(List<Item> finalItems) {
+        this.finalItems = finalItems;
     }
 
     public Champion getChampion() {
