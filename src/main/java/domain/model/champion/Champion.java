@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
- * @author: Lelental on 07.02.2017
+ * @author : Lelental on 07.02.2017
  */
 @Component
 public class Champion {

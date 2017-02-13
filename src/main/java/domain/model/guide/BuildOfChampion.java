@@ -5,11 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import javax.inject.Named;
 import java.util.List;
 
 /**
- * @author: Lelental on 07.02.2017
+ * @author : Lelental on 07.02.2017
  */
 @Component
 public class BuildOfChampion  {
