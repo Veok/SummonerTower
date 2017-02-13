@@ -1,14 +1,13 @@
-package domain.model.guide;
+package domain.model.config;
 
-import domain.model.champion.Champion;
-import domain.model.champion.ChampionConfig;
+import domain.model.guide.Item;
+import domain.model.guide.Spell;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 /**

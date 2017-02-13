@@ -1,7 +1,6 @@
-package domain.model;
+package domain.model.config;
 
 import domain.model.guide.BuildOfChampion;
-import domain.model.guide.BuildOfChampionConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

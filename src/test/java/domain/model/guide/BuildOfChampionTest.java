@@ -1,5 +1,6 @@
 package domain.model.guide;
 
+import domain.model.config.BuildOfChampionConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
