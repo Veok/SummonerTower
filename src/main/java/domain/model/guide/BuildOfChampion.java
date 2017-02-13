@@ -12,6 +12,7 @@ import java.util.List;
 @Component
 public class BuildOfChampion  {
 
+    private String buildName;
     private Champion champion;
     private Spell firstSpell;
     private Spell secondSpell;
@@ -88,5 +89,13 @@ public class BuildOfChampion  {
 
     public void setPoints(int points) {
         this.points = points;
+    }
+
+    public String getBuildName() {
+        return buildName;
+    }
+
+    public void setBuildName(String buildName) {
+        this.buildName = buildName;
     }
 }
