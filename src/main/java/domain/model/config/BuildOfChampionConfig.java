@@ -15,7 +15,7 @@ import java.util.List;
  */
 @Configuration
 @Import(ChampionConfig.class)
-@ComponentScan
+@ComponentScan(basePackages = "domain.model.guide")
 public class BuildOfChampionConfig {
 
     @Bean

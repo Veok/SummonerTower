@@ -1,5 +1,6 @@
 package domain.model.config;
 
+import domain.model.User;
 import domain.model.guide.BuildOfChampion;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,12 +12,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 @Import(BuildOfChampionConfig.class)
-@ComponentScan
+@ComponentScan(basePackageClasses = User.class)
 public class UserConfig {
-
-    @Bean
-    public BuildOfChampion buildOfChampion() {
-        return new BuildOfChampion();
-    }
 
 }

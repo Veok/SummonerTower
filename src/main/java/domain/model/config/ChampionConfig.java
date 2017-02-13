@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Configuration;
 import javax.inject.Named;
 
 /**
- * @author: Lelental on 09.02.2017
+ * @author : Lelental on 09.02.2017
  */
 @Configuration
-@ComponentScan
+@ComponentScan(basePackages = "domain.model.champion")
 public class ChampionConfig {
 
     @Bean

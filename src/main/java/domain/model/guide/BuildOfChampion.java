@@ -52,6 +52,7 @@ public class BuildOfChampion  {
     public Champion getChampion() {
         return champion;
     }
+
     @Autowired
     public void setChampion(Champion champion) {
         this.champion = champion;

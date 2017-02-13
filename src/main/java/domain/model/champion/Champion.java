@@ -81,6 +81,7 @@ public class Champion {
     public ActiveSkill getSecondActiveSkill() {
         return secondActiveSkill;
     }
+
     @Autowired
     public void setSecondActiveSkill(ActiveSkill secondActiveSkill) {
         this.secondActiveSkill = secondActiveSkill;
@@ -89,6 +90,7 @@ public class Champion {
     public ActiveSkill getThirdActiveSkill() {
         return thirdActiveSkill;
     }
+
     @Autowired
     public void setThirdActiveSkill(ActiveSkill thirdActiveSkill) {
         this.thirdActiveSkill = thirdActiveSkill;
@@ -97,6 +99,7 @@ public class Champion {
     public ActiveSkill getUltimateSkill() {
         return ultimateSkill;
     }
+
     @Autowired
     public void setUltimateSkill(ActiveSkill ultimateSkill) {
         this.ultimateSkill = ultimateSkill;
@@ -105,6 +108,7 @@ public class Champion {
     public Skill getPassiveSkill() {
         return passiveSkill;
     }
+
     @Autowired
     public void setPassiveSkill(Skill passiveSkill) {
         this.passiveSkill = passiveSkill;
