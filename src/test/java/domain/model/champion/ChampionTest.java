@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * @author: Lelental on 09.02.2017
+ * @author : Lelental on 09.02.2017
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = ChampionConfig.class)
