@@ -4,6 +4,9 @@ import domain.model.champion.Champion;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.List;
 
 /**
@@ -12,6 +15,9 @@ import java.util.List;
 @Component
 public class BuildOfChampion  {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String buildName;
     private Champion champion;
     private Spell firstSpell;
