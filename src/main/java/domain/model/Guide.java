@@ -20,6 +20,7 @@ public class Guide {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    private String nameOfGuide;
     private Champion championName;
     private Champion skills;
     private Role role;
@@ -31,6 +32,14 @@ public class Guide {
 
 
     public Guide() {
+    }
+
+    public String getNameOfGuide() {
+        return nameOfGuide;
+    }
+
+    public void setNameOfGuide(String nameOfGuide) {
+        this.nameOfGuide = nameOfGuide;
     }
 
     public long getId() {

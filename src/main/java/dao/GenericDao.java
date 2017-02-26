@@ -1,0 +1,20 @@
+package dao;
+
+import java.io.Serializable;
+import java.util.List;
+
+/**
+ * @author Lelental on 26.02.2017.
+ */
+public interface GenericDao<T, PK extends Serializable> {
+
+    PK create(T newInstance);
+
+    T read(PK id);
+
+    void update(T transientObject);
+
+    void delete(T persistentObject);
+
+    List<T> getAll();
+}
