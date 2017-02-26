@@ -1,14 +1,12 @@
 package web.config;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.jca.support.LocalConnectionFactoryBean;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -32,13 +30,13 @@ import java.util.Properties;
 @EnableJpaRepositories("dao")
 public class WebConfig extends WebMvcConfigurerAdapter {
 
-    private static final String dataBaseDriver = "db.driver";
-    private static final String databasePassword = "db.password";
-    private static final String databaseURL = "db.url";
-    private static final String databaseUserName = "db.username";
-    private static final String databaseDialect = "hibernate.dialect";
-    private static final String hibernateShowSql = "hibernate.show_sql";
-    private static final String entityMannagerPackagesToScan = "entitymanager.packages.to.scan";
+    private static final String DB_DRIVER = "db.driver";
+    private static final String DB_PASSWORD = "db.password";
+    private static final String DB_URL = "db.url";
+    private static final String DB_USERNAME = "db.username";
+    private static final String HIBERNATE_DIALECT = "hibernate.dialect";
+    private static final String HIBERNATE_SHOW_SQL = "hibernate.show_sql";
+    private static final String ENTITY_MANAGER_PACKAGES_TO_SCAN = "entitymanager.packages.to.scan";
 
     @Resource
     private Environment environment;
@@ -47,10 +45,10 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     public DataSource dataSource() {
         DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
 
-        driverManagerDataSource.setDriverClassName(environment.getRequiredProperty(dataBaseDriver));
-        driverManagerDataSource.setUrl(environment.getRequiredProperty(databaseURL));
-        driverManagerDataSource.setUsername(environment.getProperty(databaseUserName));
-        driverManagerDataSource.setPassword(environment.getProperty(databasePassword));
+        driverManagerDataSource.setDriverClassName(environment.getRequiredProperty(DB_DRIVER));
+        driverManagerDataSource.setUrl(environment.getRequiredProperty(DB_URL));
+        driverManagerDataSource.setUsername(environment.getProperty(DB_USERNAME));
+        driverManagerDataSource.setPassword(environment.getProperty(DB_PASSWORD));
 
         return driverManagerDataSource;
     }
@@ -60,7 +58,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource());
         entityManagerFactoryBean.setPersistenceProviderClass(HibernatePersistenceProvider.class);
-        entityManagerFactoryBean.setPackagesToScan(environment.getRequiredProperty(entityMannagerPackagesToScan));
+        entityManagerFactoryBean.setPackagesToScan(environment.getRequiredProperty(ENTITY_MANAGER_PACKAGES_TO_SCAN));
         entityManagerFactoryBean.setJpaProperties(hibernateProperties());
 
         return entityManagerFactoryBean;
@@ -89,8 +87,8 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
     private Properties hibernateProperties() {
         Properties properties = new Properties();
-        properties.put(databaseDialect, environment.getRequiredProperty(databaseDialect));
-        properties.put(hibernateShowSql, environment.getRequiredProperty(hibernateShowSql));
+        properties.put(HIBERNATE_DIALECT, environment.getRequiredProperty(HIBERNATE_DIALECT));
+        properties.put(HIBERNATE_SHOW_SQL, environment.getRequiredProperty(HIBERNATE_SHOW_SQL));
         return properties;
     }
 }

@@ -1,7 +1,4 @@
-package domain.model.champion;
-
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
+package domain.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +9,7 @@ import javax.persistence.Id;
  * @author Lelental on 07.02.2017
  */
 @Entity
-public class AttributesOfChampion {
+public class Attributes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +23,7 @@ public class AttributesOfChampion {
     private double attackSpeed;
     private double movementSpeed;
 
-    public AttributesOfChampion(double health, double armor, double healthRegeneration, double magicResist, double attackDamage, double attackRange, double attackSpeed, double movementSpeed) {
+    public Attributes(double health, double armor, double healthRegeneration, double magicResist, double attackDamage, double attackRange, double attackSpeed, double movementSpeed) {
         this.health = health;
         this.armor = armor;
         this.healthRegeneration = healthRegeneration;
@@ -37,7 +34,7 @@ public class AttributesOfChampion {
         this.movementSpeed = movementSpeed;
     }
 
-    public AttributesOfChampion() {
+    public Attributes() {
     }
 
 

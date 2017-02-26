@@ -1,6 +1,6 @@
 package data;
 
-import domain.model.guide.BuildOfChampion;
+import domain.model.Guide;
 
 import java.util.List;
 
@@ -8,5 +8,7 @@ import java.util.List;
  * @author Lelental on 13.02.2017.
  */
 public interface BuildOfChampionRepository {
-    List<BuildOfChampion> findBuild();
+    List<Guide> findBuild();
+
+    Guide findOneById();
 }

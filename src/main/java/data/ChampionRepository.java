@@ -1,6 +1,6 @@
 package data;
 
-import domain.model.champion.Champion;
+import domain.model.Champion;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package web;
+package web.controller;
 
 import data.ChampionRepository;
 import org.springframework.beans.factory.annotation.Autowired;

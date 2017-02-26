@@ -1,10 +1,11 @@
 package web;
 
 import data.ChampionRepository;
-import domain.model.champion.Champion;
+import domain.model.Champion;
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.servlet.view.InternalResourceView;
+import web.controller.ChampionController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +32,7 @@ public class ChampionControllerTest {
 
         ChampionController championController = new ChampionController(mockRepository);
         MockMvc mockMvc = standaloneSetup(championController)
-                .setSingleView(new InternalResourceView("/champions.jsp"))
+                .setSingleView(new InternalResourceView("WEB-INF/views/champions.jsp"))
                 .build();
 
         mockMvc.perform(get("/champions"))

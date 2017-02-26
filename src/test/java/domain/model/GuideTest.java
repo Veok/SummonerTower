@@ -1,6 +1,8 @@
 package domain.model;
 
-import domain.model.config.UserConfig;
+
+import domain.model.Guide;
+import domain.model.config.GuideConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,18 +11,22 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.*;
 
+
 /**
- * @author Lelental on 13.02.2017.
+ * @author : Lelental on 11.02.2017
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = UserConfig.class)
-public class UserTest {
+@ContextConfiguration(classes = GuideConfig.class)
+public class GuideTest {
+
 
     @Autowired
-    private User user;
+    private Guide guide;
 
     @Test
-    public void ifUserExists() {
-        assertNotNull(user);
+    public void buildShouldNotBeNull() {
+        assertNotNull(guide);
     }
+
+
 }

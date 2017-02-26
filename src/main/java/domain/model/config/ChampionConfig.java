@@ -1,42 +1,28 @@
 package domain.model.config;
 
-import domain.model.champion.*;
+import domain.model.Attributes;
+import domain.model.Skill;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import javax.inject.Named;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author : Lelental on 09.02.2017
  */
 @Configuration
-@ComponentScan(basePackages = "domain.model.champion")
+@ComponentScan(basePackages = "domain.model")
 public class ChampionConfig {
 
     @Bean
-    public AttributesOfChampion attributesOfChampion() {
-        return new AttributesOfChampion();
+    public Attributes attributesOfChampion() {
+        return new Attributes();
     }
 
     @Bean
-    @Named("skill")
-    public Skill passiveSkill(){
-        return new Skill();
-    }
-
-    @Bean
-    public ActiveSkill activeSkill(){
-        return new ActiveSkill();
-    }
-
-    @Bean
-    public Role role(){
-        return Role.adcarry;
-    }
-
-    @Bean
-    public Position position(){
-        return Position.bot;
+    public List<Skill> skills() {
+        return new ArrayList<Skill>();
     }
 }

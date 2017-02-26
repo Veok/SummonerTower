@@ -13,10 +13,10 @@
     <title>Builds</title>
 </head>
 <body>
-<c:forEach items="${buildList}" var="build">
-    <li id="build_<c:out value="build.name"/>">
+<c:forEach items="${guideList}" var="guide">
+    <li id="build_<c:out value="guide.name"/>">
         <div class="championName">
-            <c:out value="${build.champion.name}"/>
+            <c:out value="${guide.champion.name}"/>
         </div>
     </li>
 </c:forEach>

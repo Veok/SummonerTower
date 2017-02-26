@@ -1,15 +1,32 @@
-package domain.model.guide;
+package domain.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
- * @author: Lelental on 07.02.2017
+ * @author : Lelental on 07.02.2017
  */
+@Entity
 public class Item {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
     private String name;
     private int cost;
     private String description;
 
     public Item() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getName() {

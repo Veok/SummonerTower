@@ -1,10 +1,11 @@
 package web;
 
 import data.BuildOfChampionRepository;
-import domain.model.guide.BuildOfChampion;
+import domain.model.Guide;
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.servlet.view.InternalResourceView;
+import web.controller.GuidesController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,34 +19,34 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standal
 /**
  * @author Lelental on 15.02.2017.
  */
-public class BuildOfChampionControllerTest {
+public class GuideControllerTest {
 
 
     @Test
     public void shouldShowRecentBuild() throws Exception {
 
-        List<BuildOfChampion> expectedBuild = createBuildList();
+        List<Guide> expectedBuild = createGuideList();
         BuildOfChampionRepository mockRepository = mock(BuildOfChampionRepository.class);
         when(mockRepository.findBuild())
                 .thenReturn(expectedBuild);
 
-        BuildOfChampionController buildOfChampionController = new BuildOfChampionController(mockRepository);
-        MockMvc mockMvc = standaloneSetup(buildOfChampionController)
-                .setSingleView(new InternalResourceView("/builds.jsp"))
+        GuidesController guidesController = new GuidesController(mockRepository);
+        MockMvc mockMvc = standaloneSetup(guidesController)
+                .setSingleView(new InternalResourceView("WEB-INF/views/guides.jsp"))
                 .build();
 
-        mockMvc.perform(get("/builds"))
-                .andExpect(view().name("builds"));
+        mockMvc.perform(get("/guides"))
+                .andExpect(view().name("guides"));
 
 
     }
 
-    private List<BuildOfChampion> createBuildList() {
-        List<BuildOfChampion> buildOfChampions = new ArrayList<BuildOfChampion>();
+    private List<Guide> createGuideList() {
+        List<Guide> guides = new ArrayList<Guide>();
         for (int i = 0; i < 20; i++) {
-            buildOfChampions.add(new BuildOfChampion());
+            guides.add(new Guide());
 
         }
-        return buildOfChampions;
+        return guides;
     }
 }

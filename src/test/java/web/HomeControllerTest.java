@@ -2,6 +2,7 @@ package web;
 
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
+import web.controller.HomeController;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;

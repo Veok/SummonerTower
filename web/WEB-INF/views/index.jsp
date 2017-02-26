@@ -14,9 +14,9 @@
     <title>SummonerTower</title>
 </head>
 <body>
-<h1>Witaj w serwisie SummonerTower</h1>
+<h1>Welcome at SummonerTower!</h1>
 <a href="
-<c:url value="/login"/>">Zaloguj się</a>
-<a href="<c:url value="/registration"/>">Zarejestruj się</a>
+<c:url value="/guides"/>">Guides list:</a>
+<a href="<c:url value="/champions"/>">Champions: </a>
 </body>
 </html>

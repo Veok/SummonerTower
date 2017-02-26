@@ -1,5 +1,6 @@
-package domain.model.champion;
+package domain.model;
 
+import domain.model.Champion;
 import domain.model.config.ChampionConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
