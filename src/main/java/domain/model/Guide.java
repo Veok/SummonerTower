@@ -3,10 +3,8 @@ package domain.model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -14,17 +12,23 @@ import java.util.List;
  */
 @Component
 @Entity
-public class Guide {
+
+public class Guide implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     private String nameOfGuide;
+    @OneToMany
     private Champion championName;
+    @OneToMany
     private Champion skills;
+    @OneToOne
     private Role role;
+    @OneToOne
     private Spell firstSpell;
+    @OneToOne
     private Spell secondSpell;
     private List<Item> beginGameItems;
     private List<Item> middleGameItems;
