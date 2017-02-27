@@ -1,5 +1,6 @@
 package web;
 
+import dao.service.GuideService;
 import data.BuildOfChampionRepository;
 import domain.model.Guide;
 import org.junit.Test;
@@ -26,8 +27,8 @@ public class GuideControllerTest {
     public void shouldShowRecentBuild() throws Exception {
 
         List<Guide> expectedBuild = createGuideList();
-        BuildOfChampionRepository mockRepository = mock(BuildOfChampionRepository.class);
-        when(mockRepository.findBuild())
+        GuideService mockRepository = mock(GuideService.class);
+        when(mockRepository.findAll())
                 .thenReturn(expectedBuild);
 
         GuidesController guidesController = new GuidesController(mockRepository);

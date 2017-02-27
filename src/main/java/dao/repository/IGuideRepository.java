@@ -1,6 +1,5 @@
-package dao.service;
+package dao.repository;
 
-import dao.repository.IGenericRepository;
 import domain.model.Guide;
 
 import java.util.List;
@@ -8,7 +7,8 @@ import java.util.List;
 /**
  * @author Lelental on 27.02.2017.
  */
-public interface IGuideService extends IGenericRepository<Guide, Long> {
+public interface IGuideRepository extends IGenericRepository<Guide, Long> {
+
 
     List<Guide> findByGuideName(String guideName);
 

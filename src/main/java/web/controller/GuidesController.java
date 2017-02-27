@@ -1,5 +1,6 @@
 package web.controller;
 
+import dao.service.GuideService;
 import data.BuildOfChampionRepository;
 import domain.model.Guide;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,18 +19,17 @@ import java.util.List;
 @RequestMapping("/guides")
 public class GuidesController {
 
-    private BuildOfChampionRepository buildOfChampionRepository;
 
-    @Autowired
-    public GuidesController(BuildOfChampionRepository buildOfChampionRepository) {
-        this.buildOfChampionRepository = buildOfChampionRepository;
+    private GuideService guideService;
 
+    @Autowired(required = true)
+    public GuidesController(GuideService guideService) {
+        this.guideService = guideService;
     }
-
 
     @RequestMapping(method = RequestMethod.GET)
     public String build(Model model) {
-        model.addAttribute(buildOfChampionRepository.findBuild());
+        model.addAttribute(guideService.findAll());
         return "guides";
     }
 }

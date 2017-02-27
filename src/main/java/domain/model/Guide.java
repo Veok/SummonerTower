@@ -13,7 +13,7 @@ import java.util.List;
 @Component
 @Entity
 
-public class Guide implements Serializable {
+public class Guide {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
