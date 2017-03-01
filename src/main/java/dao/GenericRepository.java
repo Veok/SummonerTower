@@ -1,5 +1,6 @@
-package dao.repository;
+package dao;
 
+import dao.repositories.IGenericRepository;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;

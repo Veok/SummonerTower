@@ -10,7 +10,7 @@ import java.util.List;
  * @author : Lelental on 07.02.2017
  */
 
-@Component
+
 @Entity
 public class Champion {
 
@@ -55,7 +55,7 @@ public class Champion {
         return skills;
     }
 
-    @Autowired
+
     public void setSkills(List<Skill> skills) {
         this.skills = skills;
     }
@@ -64,7 +64,7 @@ public class Champion {
         return attributes;
     }
 
-    @Autowired
+
     public void setAttributes(Attributes attributes) {
         this.attributes = attributes;
     }

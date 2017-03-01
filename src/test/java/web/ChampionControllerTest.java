@@ -1,11 +1,11 @@
 package web;
 
-import data.ChampionRepository;
 import domain.model.Champion;
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.servlet.view.InternalResourceView;
-import web.controller.ChampionController;
+import service.ChampionService;
+import web.controllers.ChampionController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +26,8 @@ public class ChampionControllerTest {
     public void shouldShowRecentChampions() throws Exception {
 
         List<Champion> expectedChampion = createChampionList();
-        ChampionRepository mockRepository = mock(ChampionRepository.class);
-        when(mockRepository.championList())
+        ChampionService mockRepository = mock(ChampionService.class);
+        when(mockRepository.findAll())
                 .thenReturn(expectedChampion);
 
         ChampionController championController = new ChampionController(mockRepository);

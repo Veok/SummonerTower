@@ -10,9 +10,8 @@ import java.util.List;
 /**
  * @author : Lelental on 07.02.2017
  */
-@Component
-@Entity
 
+@Entity
 public class Guide {
 
     @Id
@@ -58,7 +57,6 @@ public class Guide {
         return championName;
     }
 
-    @Autowired
     public void setChampionName(Champion championName) {
         this.championName = championName;
     }
@@ -67,12 +65,11 @@ public class Guide {
         return skills;
     }
 
-    @Autowired
     public void setSkills(Champion skills) {
         this.skills = skills;
     }
 
-    @Autowired
+
     public Role getRole() {
         return role;
     }
@@ -85,7 +82,6 @@ public class Guide {
         return firstSpell;
     }
 
-    @Autowired
     public void setFirstSpell(Spell firstSpell) {
         this.firstSpell = firstSpell;
     }
@@ -94,7 +90,6 @@ public class Guide {
         return secondSpell;
     }
 
-    @Autowired
     public void setSecondSpell(Spell secondSpell) {
         this.secondSpell = secondSpell;
     }
@@ -103,7 +98,6 @@ public class Guide {
         return beginGameItems;
     }
 
-    @Autowired
     public void setBeginGameItems(List<Item> beginGameItems) {
         this.beginGameItems = beginGameItems;
     }
@@ -112,7 +106,6 @@ public class Guide {
         return middleGameItems;
     }
 
-    @Autowired
     public void setMiddleGameItems(List<Item> middleGameItems) {
         this.middleGameItems = middleGameItems;
     }
@@ -121,7 +114,6 @@ public class Guide {
         return endGameItems;
     }
 
-    @Autowired
     public void setEndGameItems(List<Item> endGameItems) {
         this.endGameItems = endGameItems;
     }

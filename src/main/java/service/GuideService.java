@@ -1,13 +1,14 @@
-package dao.service;
+package service;
 
-import dao.repository.GuideRepository;
-import dao.repository.IGenericRepository;
+import dao.GuideRepository;
+import dao.repositories.IGenericRepository;
 import domain.model.Guide;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import service.services.IGuideService;
 
 
 import java.util.List;
@@ -19,9 +20,6 @@ import java.util.List;
 public class GuideService extends GenericService<Guide, Long> implements IGuideService {
 
     private GuideRepository guideDao;
-
-    public GuideService() {
-    }
 
     @Autowired
     public GuideService(@Qualifier("guideDao") IGenericRepository<Guide, Long> genericDao) {

@@ -1,11 +1,12 @@
-package web.controller;
+package web.controllers;
 
-import data.ChampionRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import service.ChampionService;
 
 /**
  * @author Lelental on 16.02.2017.
@@ -14,16 +15,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("/champions")
 public class ChampionController {
 
-    private ChampionRepository championRepository;
+
+    private ChampionService championService;
 
     @Autowired
-    public ChampionController(ChampionRepository championRepository) {
-        this.championRepository = championRepository;
+    public ChampionController(ChampionService championService) {
+        this.championService = championService;
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public String champion(Model model) {
-        model.addAttribute(championRepository.championList());
+    public String build(Model model) {
+        model.addAttribute(championService.findAll());
         return "champions";
     }
 }

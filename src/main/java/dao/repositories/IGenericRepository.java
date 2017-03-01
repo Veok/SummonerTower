@@ -1,11 +1,11 @@
-package dao.service;
+package dao.repositories;
 
 import java.util.List;
 
 /**
  * @author Lelental on 27.02.2017.
  */
-public interface IGenericService<T, K> {
+public interface IGenericRepository<T, K> {
 
     List<T> findAll();
 
@@ -16,5 +16,6 @@ public interface IGenericService<T, K> {
     void add(T entity);
 
     T find(K key);
+
 
 }

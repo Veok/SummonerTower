@@ -1,6 +1,6 @@
-package dao.service;
+package service.services;
 
-import dao.repository.IGenericRepository;
+import dao.repositories.IGenericRepository;
 import domain.model.Guide;
 
 import java.util.List;

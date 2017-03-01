@@ -1,9 +1,10 @@
-package dao.service;
+package service;
 
-import dao.repository.IGenericRepository;
+import dao.repositories.IGenericRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import service.services.IGenericService;
 
 import java.util.List;
 

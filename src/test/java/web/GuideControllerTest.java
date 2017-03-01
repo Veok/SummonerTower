@@ -1,12 +1,11 @@
 package web;
 
-import dao.service.GuideService;
-import data.BuildOfChampionRepository;
+import service.GuideService;
 import domain.model.Guide;
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.servlet.view.InternalResourceView;
-import web.controller.GuidesController;
+import web.controllers.GuideController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,8 +30,8 @@ public class GuideControllerTest {
         when(mockRepository.findAll())
                 .thenReturn(expectedBuild);
 
-        GuidesController guidesController = new GuidesController(mockRepository);
-        MockMvc mockMvc = standaloneSetup(guidesController)
+        GuideController guideController = new GuideController(mockRepository);
+        MockMvc mockMvc = standaloneSetup(guideController)
                 .setSingleView(new InternalResourceView("WEB-INF/views/guides.jsp"))
                 .build();
 

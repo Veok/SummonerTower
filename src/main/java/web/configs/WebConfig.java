@@ -1,4 +1,4 @@
-package web.config;
+package web.configs;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.context.annotation.Bean;
