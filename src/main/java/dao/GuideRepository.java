@@ -1,6 +1,5 @@
 package dao;
 
-import dao.GenericRepository;
 import dao.repositories.IGuideRepository;
 import domain.model.Guide;
 import org.springframework.data.jpa.repository.Query;
@@ -12,9 +11,9 @@ import java.util.List;
  * @author Lelental on 27.02.2017.
  */
 @Repository
+@SuppressWarnings("JpaQlInspection")
 public class GuideRepository extends GenericRepository<Guide, Long> implements IGuideRepository {
 
-    @SuppressWarnings("JpaQlInspection")
     public List<Guide> findByGuideName(String guideName) {
         Query query = (Query) getEntityManager()
                 .createQuery("from domain.model.Guide where nameOfGuide=:nameOfGuide")

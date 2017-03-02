@@ -9,7 +9,7 @@ import javax.persistence.Id;
  * @author : Lelental on 07.02.2017
  */
 @Entity
-public class Item {
+public class Equipment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class Item {
     private int cost;
     private String description;
 
-    public Item() {
+    public Equipment() {
     }
 
     public long getId() {

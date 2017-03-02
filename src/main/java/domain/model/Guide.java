@@ -1,10 +1,6 @@
 package domain.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -29,9 +25,9 @@ public class Guide {
     private Spell firstSpell;
     @OneToOne
     private Spell secondSpell;
-    private List<Item> beginGameItems;
-    private List<Item> middleGameItems;
-    private List<Item> endGameItems;
+    private List<Equipment> beginGameEquipments;
+    private List<Equipment> middleGameEquipments;
+    private List<Equipment> endGameEquipments;
 
 
     public Guide() {
@@ -94,27 +90,27 @@ public class Guide {
         this.secondSpell = secondSpell;
     }
 
-    public List<Item> getBeginGameItems() {
-        return beginGameItems;
+    public List<Equipment> getBeginGameEquipments() {
+        return beginGameEquipments;
     }
 
-    public void setBeginGameItems(List<Item> beginGameItems) {
-        this.beginGameItems = beginGameItems;
+    public void setBeginGameEquipments(List<Equipment> beginGameEquipments) {
+        this.beginGameEquipments = beginGameEquipments;
     }
 
-    public List<Item> getMiddleGameItems() {
-        return middleGameItems;
+    public List<Equipment> getMiddleGameEquipments() {
+        return middleGameEquipments;
     }
 
-    public void setMiddleGameItems(List<Item> middleGameItems) {
-        this.middleGameItems = middleGameItems;
+    public void setMiddleGameEquipments(List<Equipment> middleGameEquipments) {
+        this.middleGameEquipments = middleGameEquipments;
     }
 
-    public List<Item> getEndGameItems() {
-        return endGameItems;
+    public List<Equipment> getEndGameEquipments() {
+        return endGameEquipments;
     }
 
-    public void setEndGameItems(List<Item> endGameItems) {
-        this.endGameItems = endGameItems;
+    public void setEndGameEquipments(List<Equipment> endGameEquipments) {
+        this.endGameEquipments = endGameEquipments;
     }
 }
