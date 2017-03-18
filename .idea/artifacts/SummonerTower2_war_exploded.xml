@@ -1,0 +1,55 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SummonerTower2:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SummonerTower2_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SummonerTower2" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Spring-4.3.6.RELEASE" />
+          <element id="library" level="project" name="Spring Security-3.2.5" />
+          <element id="library" level="project" name="Spring MVC-4.3.6.RELEASE" />
+          <element id="library" level="project" name="Hibernate 5.2.3-5.2.3" />
+          <element id="library" level="project" name="Spring Data JPA-1.3.3" />
+          <element id="library" level="project" name="Maven: org.junit.jupiter:junit-jupiter-api:5.0.0-M3" />
+          <element id="library" level="project" name="Maven: org.opentest4j:opentest4j:1.0.0-M1" />
+          <element id="library" level="project" name="Maven: org.junit.platform:junit-platform-commons:1.0.0-M3" />
+          <element id="library" level="project" name="Maven: junit:junit:4.12" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
+          <element id="library" level="project" name="Maven: org.mockito:mockito-all:1.10.19" />
+          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-junit:2.0.0.0" />
+          <element id="library" level="project" name="Maven: org.hamcrest:java-hamcrest:2.0.0.0" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.2.4.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.3.0.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Maven: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1" />
+          <element id="library" level="project" name="Maven: org.jboss:jandex:2.0.0.Final" />
+          <element id="library" level="project" name="Maven: com.fasterxml:classmate:1.3.0" />
+          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
+          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.1.Final" />
+          <element id="library" level="project" name="Maven: javax.enterprise:cdi-api:1.1" />
+          <element id="library" level="project" name="Maven: javax.el:el-api:2.2" />
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.1_spec:1.0.0.Beta1" />
+          <element id="library" level="project" name="Maven: javax.annotation:jsr250-api:1.0" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:2.3.4" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.7.2" />
+        </element>
+      </element>
+      <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:${spring-data-version}" />
+      <element id="library" level="project" name="Maven: org.springframework:spring-core:unknown" />
+      <element id="library" level="project" name="Maven: org.springframework:spring-summonerTower.web:unknown" />
+      <element id="library" level="project" name="Maven: org.springframework:spring-orm:unknown" />
+      <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:unknown" />
+      <element id="library" level="project" name="Maven: org.springframework:spring-context-support:unknown" />
+      <element id="library" level="project" name="Maven: javax:javaee-summonerTower.web-api:7.0" />
+      <element id="javaee-facet-resources" facet="SummonerTower2/web/Web" />
+      <element id="javaee-facet-resources" facet="SummonerTower2/web/Web2" />
+    </root>
+  </artifact>
+</component>
