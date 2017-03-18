@@ -26,8 +26,15 @@ public class ChampionController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public String build(Model model) {
-        model.addAttribute(championService.findAll());
+    public String championView() {
         return "champions";
     }
+
+    @RequestMapping(value = {"/all"}, method = RequestMethod.GET)
+    public String build(Model model) {
+        model.addAttribute(championService.findAll());
+        return "allChampions";
+    }
+
+
 }

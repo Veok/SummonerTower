@@ -23,8 +23,13 @@ public class GuideController {
     }
 
     @RequestMapping(method = RequestMethod.GET)
-    public String build(Model model) {
-        model.addAttribute(guideService.findAll());
+    public String guidesView() {
         return "guides";
+    }
+
+    @RequestMapping(value = {"all"}, method = RequestMethod.GET)
+    public String build(Model model) {
+        model.addAttribute("guideList", guideService.findAll());
+        return "guidesAll";
     }
 }
